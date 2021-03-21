@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import service from "../services/Service";
-import Card from "./Card";
+import Canidate from "./Candidate";
 import Filter from "./Filter";
+
 export default function Main() {
   const [loadMore, setLoadMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  //TODO screen waiting backend
 
   useEffect(() => {
     const loadCandidates = async () => {
@@ -49,9 +48,9 @@ export default function Main() {
       <Filter />
       <div className="List" id="list">
         {candidates.map((candidate) => (
-          <Card key={candidate.id} candidate={candidate} />
+          <Canidate key={candidate.id} candidate={candidate} />
         ))}
-        {isLoading && "carregando..."}
+        {isLoading && "carregando..." /**TODO screen waiting backend */}
       </div>
     </div>
   );

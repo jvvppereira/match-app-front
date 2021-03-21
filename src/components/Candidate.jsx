@@ -1,10 +1,12 @@
 import React from "react";
-export default function Card({ candidate }) {
-  const technologiesList = candidate.technologies.reduce(
-    (acumulador, currentTechnology) =>
-      `${acumulador}, ${currentTechnology.name}`,
-    ''
-  ).slice(1);
+export default function Canidate({ candidate }) {
+  const technologiesList = candidate.technologies
+    .reduce(
+      (acumulator, currentTechnology) =>
+        `${acumulator}, ${currentTechnology.name}`,
+      ""
+    )
+    .slice(1);
 
   return (
     <div className="Card">
@@ -16,10 +18,7 @@ export default function Card({ candidate }) {
       </strong>
       <p>Cidade: {candidate.city}</p>
 
-      <p>
-        Tecnologias:
-        {technologiesList}
-      </p>
+      <p>Tecnologias: {technologiesList}</p>
     </div>
   );
 }
