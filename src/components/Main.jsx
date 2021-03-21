@@ -1,41 +1,58 @@
+import { makeStyles } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import service from "../services/Service";
 import Canidate from "./Candidate";
 import Filter from "./Filter";
 
+const useStyles = makeStyles({
+  list: {
+    maxWidth: "700px",
+    margin: "20px auto 0",
+    padding: "0 20px",
+  },
+});
+
 export default function Main() {
   const [loadMore, setLoadMore] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filters, setFilters] = useState({});
+
+  const classes = useStyles();
 
   useEffect(() => {
     const loadCandidates = async () => {
       setIsLoading(true);
 
-      const response = await service.get(`/candidate?page=${currentPage}`);
-      const { data: candidatesFromApi, page } = response.data;
+      const response = await service.patch(
+        `/candidate?page=${currentPage}`,
+        filters
+      );
+      const { data: candidatesFromApi } = response.data;
 
-      setCurrentPage(page + 1);
-
-      setCandidates((currentCandidates) => [
-        ...currentCandidates,
-        ...candidatesFromApi,
-      ]);
+      setCandidates((currentCandidates) => {
+        if (loadMore) {
+          return [...currentCandidates, ...candidatesFromApi];
+        } else {
+          return [...candidatesFromApi];
+        }
+      });
 
       setLoadMore(false);
       setIsLoading(false);
     };
 
     loadCandidates();
-  }, [loadMore]);
+  }, [loadMore, filters]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => { //TODO review this routine
       if (
         window.innerHeight + document.documentElement.scrollTop ===
         document.documentElement.offsetHeight
       ) {
+        setCurrentPage(currentPage + 1);
         setLoadMore(true);
       }
     };
@@ -44,9 +61,9 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="Main">
-      <Filter />
-      <div className="List" id="list">
+    <div>
+      <Filter setFilters={setFilters} />
+      <div className={classes.list}>
         {candidates.map((candidate) => (
           <Canidate key={candidate.id} candidate={candidate} />
         ))}
