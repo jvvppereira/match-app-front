@@ -10,6 +10,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import AutoCompleteDefault from "./AutoCompleteDefault";
 
 const useStyles = makeStyles({
   filter: {
@@ -23,9 +24,8 @@ const useStyles = makeStyles({
     marginBottom: "10px",
   },
   button: {
-    marginLeft: "84.7%",
-    background: "#9412dc",
-    backgroundColor: "#9412dc",
+    float: "right",
+    marginBottom: "16px",
   },
 });
 
@@ -68,53 +68,20 @@ export default function Filter({ setFilters }) {
         <Typography variant="h6" className={classes.title}>
           Localize um candidato:
         </Typography>
-
-        <Autocomplete
-          className={classes.autocomplete}
-          size="small"
-          multiple
+        <AutoCompleteDefault
+          placeholder="Cidade"
           options={citiesOption}
-          filterSelectedOptions
-          onChange={(event, value) => setSelectedCities(value)}
-          noOptionsText="Nenhum valor encontrado"
-          loadingText="Carregando..."
-          renderInput={(params) => (
-            <TextField {...params} variant="outlined" placeholder="Cidade" />
-          )}
+          setSelectedOptions={setSelectedCities}
         />
-        <Autocomplete
-          className={classes.autocomplete}
-          size="small"
-          multiple
+        <AutoCompleteDefault
+          placeholder="Experiência"
           options={experiencesOption}
-          filterSelectedOptions
-          onChange={(event, value) => setSelectedExperiences(value)}
-          noOptionsText="Nenhum valor encontrado"
-          loadingText="Carregando..."
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              variant="outlined"
-              placeholder="Experiência"
-            />
-          )}
+          setSelectedOptions={setSelectedExperiences}
         />
-        <Autocomplete
-          className={classes.autocomplete}
-          size="small"
-          multiple
+        <AutoCompleteDefault
+          placeholder="Tecnologias"
           options={technologiesOption}
-          filterSelectedOptions
-          onChange={(event, value) => setSelectedTechnologies(value)}
-          noOptionsText="Nenhum valor encontrado"
-          loadingText="Carregando..."
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              variant="outlined"
-              placeholder="Tecnologias"
-            />
-          )}
+          setSelectedOptions={setSelectedTechnologies}
         />
         <Button
           variant="contained"

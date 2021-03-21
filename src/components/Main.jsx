@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     margin: "20px auto 0",
     padding: "0 20px",
   },
+  main: {
+    padding: '0 20px'
+  }
 });
 
 export default function Main() {
@@ -61,7 +64,7 @@ export default function Main() {
   }, []);
 
   return (
-    <div>
+    <div className={classes.main}>
       <Filter setFilters={setFilters} />
       <div className={classes.list}>
         {candidates.map((candidate) => (

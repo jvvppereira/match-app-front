@@ -5,6 +5,9 @@ const useStyles = makeStyles({
   card: {
     marginBottom: "20px",
   },
+  experience: {
+    float: "right",
+  },
 });
 
 export default function Candidate({ candidate }) {
@@ -13,7 +16,9 @@ export default function Candidate({ candidate }) {
   const technologiesList = candidate.technologies
     .reduce(
       (acumulator, currentTechnology) =>
-        `${acumulator}, ${currentTechnology.name}`,
+        `${acumulator}, ${currentTechnology.name}${
+          currentTechnology.is_main_tech ? "*" : ""
+        }`,
       ""
     )
     .slice(1);
@@ -22,11 +27,9 @@ export default function Candidate({ candidate }) {
     <Card className={classes.card} variant="outlined">
       <CardContent>
         <i>Candidato #{candidate.id}</i>
-        <br></br>
-        <br></br>
-        <strong>
+        <b className={classes.experience}>
           Experiência: {candidate.experience.replace("years", "anos")}
-        </strong>
+        </b>
         <p>Cidade: {candidate.city}</p>
 
         <p>Tecnologias: {technologiesList}</p>
