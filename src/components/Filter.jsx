@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Autocomplete from "@material-ui/lab/Autocomplete";
 import service from "../services/Service";
 import SearchIcon from "@material-ui/icons/Search";
 import {
   Card,
   CardContent,
   Button,
-  TextField,
   makeStyles,
   Typography,
 } from "@material-ui/core";

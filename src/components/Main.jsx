@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import service from "../services/Service";
 import Canidate from "./Candidate";
 import Filter from "./Filter";
+import NoDataFound from "./NoDataFound";
 
 const useStyles = makeStyles({
   list: {
@@ -11,8 +12,8 @@ const useStyles = makeStyles({
     padding: "0 20px",
   },
   main: {
-    padding: '0 20px'
-  }
+    padding: "0 20px",
+  },
 });
 
 export default function Main() {
@@ -24,33 +25,34 @@ export default function Main() {
 
   const classes = useStyles();
 
+  const loadCandidates = async () => {
+    setIsLoading(true);
+
+    const response = await service.patch(
+      `/candidate?page=${currentPage}`,
+      filters
+    );
+    const { data: candidatesFromApi } = response.data;
+
+    setCandidates((currentCandidates) => {
+      if (loadMore) {
+        return [...currentCandidates, ...candidatesFromApi];
+      } else {
+        return [...candidatesFromApi];
+      }
+    });
+
+    setLoadMore(false);
+    setIsLoading(false);
+  };
+
   useEffect(() => {
-    const loadCandidates = async () => {
-      setIsLoading(true);
-
-      const response = await service.patch(
-        `/candidate?page=${currentPage}`,
-        filters
-      );
-      const { data: candidatesFromApi } = response.data;
-
-      setCandidates((currentCandidates) => {
-        if (loadMore) {
-          return [...currentCandidates, ...candidatesFromApi];
-        } else {
-          return [...candidatesFromApi];
-        }
-      });
-
-      setLoadMore(false);
-      setIsLoading(false);
-    };
-
     loadCandidates();
   }, [loadMore, filters]);
 
   useEffect(() => {
-    const handleScroll = () => { //TODO review this routine
+    const handleScroll = () => {
+      //TODO review this routine
       if (
         window.innerHeight + document.documentElement.scrollTop ===
         document.documentElement.offsetHeight
@@ -71,6 +73,7 @@ export default function Main() {
           <Canidate key={candidate.id} candidate={candidate} />
         ))}
         {isLoading && "carregando..." /**TODO screen waiting backend */}
+        {!isLoading && candidates.length === 0 && <NoDataFound />}
       </div>
     </div>
   );
