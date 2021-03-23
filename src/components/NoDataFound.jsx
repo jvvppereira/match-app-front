@@ -16,7 +16,7 @@ export default function NoDataFound() {
   const classes = useStyles();
   return (
     <Card className={classes.card} variant="outlined">
-      <Typography className={classes.text} variant="h6">Não há candidatos com esses filtros</Typography>
+      <Typography className={classes.text} variant="h6">Não há candidatos com estes filtros</Typography>
     </Card>
   );
 }
