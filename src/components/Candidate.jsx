@@ -37,37 +37,35 @@ export default function Candidate({ candidate }) {
     )
     .slice(1);
 
+  candidate.idText = `Candidato #${candidate.id}`;
+  candidate.experienceText = `Experiência: ${candidate.experience.replace(
+    "years",
+    "anos"
+  )}`;
+  candidate.cityText = `Cidade: ${candidate.city}`;
+  candidate.technologiesText = `Tecnologias: ${technologiesList}`;
+
   return (
     <Card className={classes.card} variant="outlined">
       <CardContent>
         <i className={classes.candidateId}>
-          <CandidateSkeleton
-            showSkeleton={candidate.isEmpty}
-            text={`Candidato #${candidate.id}`}
-          />
+          <CandidateSkeleton candidate={candidate} infoType={"id"} />
         </i>
         <b className={classes.experience}>
           <CandidateSkeleton
-            className={classes.experienceSkeleton}
-            showSkeleton={candidate.isEmpty}
+            candidate={candidate}
+            infoType={"experience"}
             float="right"
-            text={`Experiência: ${candidate.experience.replace(
-              "years",
-              "anos"
-            )}`}
           />
         </b>
         <div className={classes.city}>
-          <CandidateSkeleton
-            showSkeleton={candidate.isEmpty}
-            text={`Cidade: ${candidate.city}`}
-          />
+          <CandidateSkeleton candidate={candidate} infoType={"city"} />
         </div>
         <div>
           <CandidateSkeleton
-            showSkeleton={candidate.isEmpty}
+            candidate={candidate}
+            infoType={"technologies"}
             size="large"
-            text={`Tecnologias: ${technologiesList}`}
           />
         </div>
       </CardContent>

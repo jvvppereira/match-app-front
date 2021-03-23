@@ -3,9 +3,9 @@ import { Skeleton } from "@material-ui/lab";
 import React from "react";
 
 export default function CandidateSkeleton({
-  showSkeleton,
+  candidate,
+  infoType,
   size,
-  text,
   float = "none",
 }) {
   let width;
@@ -13,11 +13,9 @@ export default function CandidateSkeleton({
     case "small":
       width = "25%";
       break;
-
     case "large":
       width = "100%";
       break;
-
     default:
       width = "50%";
       break;
@@ -30,9 +28,27 @@ export default function CandidateSkeleton({
     },
   });
 
+  let text;
+  switch (infoType) {
+    case "id":
+      text = candidate.idText;
+      break;
+    case "experience":
+      text = candidate.experienceText;
+      break;
+    case "city":
+      text = candidate.cityText;
+      break;
+    default:
+      text = candidate.technologiesText;
+      break;
+  }
+
   const classes = useStyles();
 
   return (
-    <div>{showSkeleton ? <Skeleton className={classes.skeleton} /> : text}</div>
+    <div>
+      {candidate.isEmpty ? <Skeleton className={classes.skeleton} /> : text}
+    </div>
   );
 }
