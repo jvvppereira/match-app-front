@@ -43,7 +43,6 @@ export default function Candidate({ candidate }) {
         <i className={classes.candidateId}>
           <CandidateSkeleton
             showSkeleton={candidate.isEmpty}
-            size="medium"
             text={`Candidato #${candidate.id}`}
           />
         </i>
@@ -51,7 +50,6 @@ export default function Candidate({ candidate }) {
           <CandidateSkeleton
             className={classes.experienceSkeleton}
             showSkeleton={candidate.isEmpty}
-            size="medium"
             float="right"
             text={`Experiência: ${candidate.experience.replace(
               "years",
@@ -62,7 +60,6 @@ export default function Candidate({ candidate }) {
         <div className={classes.city}>
           <CandidateSkeleton
             showSkeleton={candidate.isEmpty}
-            size="medium"
             text={`Cidade: ${candidate.city}`}
           />
         </div>
