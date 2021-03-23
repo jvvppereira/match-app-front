@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import service from "../services/Service";
 import Candidate from "./Candidate";
 import Filter from "./Filter";
-import ListLoading from "./ListLoading";
+import ListLoader from "./ListLoader";
 import NoDataFound from "./NoDataFound";
 
 const useStyles = makeStyles({
@@ -75,7 +75,7 @@ export default function Main() {
         {candidates.map((candidate) => (
           <Candidate key={candidate.id} candidate={candidate} />
         ))}
-        {isLoading && <ListLoading />}
+        {isLoading && <ListLoader />}
         {!isLoading && candidates.length === 0 && <NoDataFound />}
       </div>
     </div>

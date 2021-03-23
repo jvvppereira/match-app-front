@@ -1,7 +1,7 @@
 import React from "react";
 import Candidate from "./Candidate";
 
-export default function ListLoading() {
+export default function ListLoader() {
   const emptyCandidate = {
     technologies: [],
     experience: "",
@@ -10,13 +10,14 @@ export default function ListLoading() {
 
   const emptyCandidates = [];
   for (let index = 0; index < 4; index++) {
-    emptyCandidates.push(emptyCandidate);
+    emptyCandidate.id = index;
+    emptyCandidates.push({...emptyCandidate});
   }
 
   return (
     <div>
       {emptyCandidates.map((candidate) => (
-        <Candidate candidate={candidate} />
+        <Candidate key={candidate.id} candidate={candidate} />
       ))}
     </div>
   );

@@ -1,4 +1,4 @@
-import { Card, CardContent, makeStyles, Typography } from "@material-ui/core";
+import { Card, CardContent, makeStyles } from "@material-ui/core";
 import React from "react";
 import CandidateSkeleton from "./CandidateSkeleton";
 
@@ -8,19 +8,19 @@ const useStyles = makeStyles({
   },
   candidateId: {
     float: "left",
-    width: "50%",
     fontStyle: "italic",
+    width: "50%",
   },
   experience: {
     float: "right",
-    width: "50%",
     fontWeight: "bold",
     textAlign: "right",
+    width: "50%",
   },
   city: {
     display: "inline-block",
-    marginBottom: "0",
     width: "50%",
+    margin: "16px 0",
   },
 });
 
@@ -59,20 +59,20 @@ export default function Candidate({ candidate }) {
             )}`}
           />
         </b>
-        <p className={classes.city}>
+        <div className={classes.city}>
           <CandidateSkeleton
             showSkeleton={candidate.isEmpty}
             size="medium"
             text={`Cidade: ${candidate.city}`}
           />
-        </p>
-        <p>
+        </div>
+        <div>
           <CandidateSkeleton
             showSkeleton={candidate.isEmpty}
             size="large"
             text={`Tecnologias: ${technologiesList}`}
           />
-        </p>
+        </div>
       </CardContent>
     </Card>
   );

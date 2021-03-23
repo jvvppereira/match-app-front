@@ -61,7 +61,8 @@ export default function Filter({ setFilters }) {
   };
 
   return (
-    <Card className={classes.filter} variant="outlined">
+    <Card className={classes.filter} variant="outlined"> 
+      {/* TODO create a way to close and expand filter */}
       <CardContent>
         <Typography variant="h6" className={classes.title}>
           Localize um candidato:
