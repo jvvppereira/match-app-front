@@ -18,55 +18,61 @@ const useStyles = makeStyles({
 });
 
 export default function Main() {
-  const [loadMore, setLoadMore] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [lastPageAvailable, setLastPageAvailable] = useState();
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filters, setFilters] = useState({});
 
   const classes = useStyles();
 
-  const loadCandidates = async () => {
+  const loadCandidates = async (page = 1) => {
+    //TODO verify how to show loader better
+    if (Number(lastPageAvailable) === page - 1) {
+      return;
+    }
     setIsLoading(true);
 
-    !loadMore && setCandidates([]);
+    page === 1 && setCandidates([]);
+
+    setCurrentPage(page);
 
     const response = await service.patch(
-      `/candidate?page=${currentPage}`,
+      `/candidate?rowsPerPage=20&page=${page}`,
       filters
     );
-    const { data: candidatesFromApi } = response.data;
+    const { data: candidatesFromApi, pages } = response.data;
+
+    setLastPageAvailable(pages);
 
     setCandidates((currentCandidates) => {
-      if (loadMore) {
+      if (page > 1) {
         return [...currentCandidates, ...candidatesFromApi];
       } else {
         return [...candidatesFromApi];
       }
     });
 
-    setLoadMore(false);
     setIsLoading(false);
   };
 
   useEffect(() => {
     loadCandidates();
-  }, [loadMore, filters]);
+  }, [filters]);
 
   useEffect(() => {
     const handleScroll = () => {
-      //TODO review this routine
+      const LISTLOADER_HEIGTH = 600;
       if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
+        window.innerHeight + document.documentElement.scrollTop <
+        document.documentElement.offsetHeight + LISTLOADER_HEIGTH / 3
       ) {
-        setCurrentPage(currentPage + 1);
-        setLoadMore(true);
+        loadCandidates(currentPage + 1);
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [currentPage]);
 
   return (
     <div className={classes.main}>
