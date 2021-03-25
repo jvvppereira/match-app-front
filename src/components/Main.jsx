@@ -21,14 +21,13 @@ export default function Main() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPageAvailable, setLastPageAvailable] = useState();
   const [candidates, setCandidates] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [filters, setFilters] = useState({});
 
   const classes = useStyles();
 
   const loadCandidates = async (page = 1) => {
-    //TODO verify how to show loader better
-    if (Number(lastPageAvailable) === page - 1) {
+    if (Number(lastPageAvailable) <= page - 1 || isLoading) {
       return;
     }
     setIsLoading(true);
@@ -62,7 +61,7 @@ export default function Main() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const LISTLOADER_HEIGTH = 600;
+      const LISTLOADER_HEIGTH = 600; //TODO verify how to show loader better
       if (
         window.innerHeight + document.documentElement.scrollTop <
         document.documentElement.offsetHeight + LISTLOADER_HEIGTH / 3
@@ -72,7 +71,7 @@ export default function Main() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentPage]);
+  }, [currentPage, isLoading]);
 
   return (
     <div className={classes.main}>

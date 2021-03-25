@@ -63,6 +63,7 @@ export default function Filter({ setFilters }) {
   return (
     <Card className={classes.filter} variant="outlined"> 
       {/* TODO create a way to close and expand filter */}
+      {/* TODO create a way to control if will filter && or || */}
       <CardContent>
         <Typography variant="h6" className={classes.title}>
           Localize um candidato:
