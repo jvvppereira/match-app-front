@@ -27,7 +27,10 @@ export default function Main() {
   const classes = useStyles();
 
   const loadCandidates = async (page = 1) => {
-    if (Number(lastPageAvailable) <= page - 1 || isLoading) {
+    if (
+      (lastPageAvailable !== 0 && Number(lastPageAvailable) <= page - 1) ||
+      isLoading
+    ) {
       return;
     }
     setIsLoading(true);

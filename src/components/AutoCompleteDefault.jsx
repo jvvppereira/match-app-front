@@ -1,4 +1,9 @@
-import { makeStyles, TextField } from "@material-ui/core";
+import {
+  Checkbox,
+  FormControlLabel,
+  makeStyles,
+  TextField,
+} from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import React from "react";
 
@@ -9,24 +14,59 @@ const useStyles = makeStyles({
 });
 
 export default function AutoCompleteDefault({
-  placeholder,
+  type,
   options,
   setSelectedOptions,
+  setWayToFilter,
 }) {
   const classes = useStyles();
+
+  let label;
+
+  switch (type) {
+    case "city":
+      label = "Cidade";
+      break;
+    case "experience":
+      label = "Experiência";
+      break;
+    default:
+      label = "Tecnologias";
+      break;
+  }
+
   return (
-    <Autocomplete
-      className={classes.autocomplete}
-      size="small"
-      multiple
-      options={options}
-      filterSelectedOptions
-      onChange={(event, value) => setSelectedOptions(value)}
-      noOptionsText="Nenhum valor encontrado"
-      loadingText="Carregando..."
-      renderInput={(params) => (
-        <TextField {...params} variant="outlined" placeholder={placeholder} />
+    <div>
+      <Autocomplete
+        className={classes.autocomplete}
+        size="small"
+        multiple
+        options={options}
+        filterSelectedOptions
+        onChange={(event, value) => setSelectedOptions(value)}
+        noOptionsText="Nenhum valor encontrado"
+        loadingText="Carregando..."
+        clearText="Limpar"
+        closeText="Fechar"
+        openText="Abrir"
+        getOptionLabel={(option) =>
+          type === "experience" ? option.replace("years", "anos") : option
+        }
+        renderInput={(params) => (
+          <TextField {...params} variant="outlined" label={label} />
+        )}
+      />
+      {setWayToFilter && (
+        <FormControlLabel
+          control={
+            <Checkbox
+              onChange={(event) => setWayToFilter(event.target.checked)}
+              color="primary"
+            />
+          }
+          label="Atender a todas as tecnologias"
+        /> //TODO filter by main tech
       )}
-    />
+    </div>
   );
 }

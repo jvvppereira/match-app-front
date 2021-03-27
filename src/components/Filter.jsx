@@ -34,6 +34,7 @@ export default function Filter({ setFilters }) {
   const [selectedCities, setSelectedCities] = useState([]);
   const [selectedExperiences, setSelectedExperiences] = useState([]);
   const [selectedTechnologies, setSelectedTechnologies] = useState([]);
+  const [wayToFilterTechnologies, setWayToFilterTechnologies] = useState(false);
 
   const classes = useStyles();
 
@@ -56,32 +57,35 @@ export default function Filter({ setFilters }) {
     setFilters({
       cities: selectedCities,
       experiences: selectedExperiences,
-      technologies: selectedTechnologies,
+      technologies: {
+        wayToFilter: wayToFilterTechnologies ? "and" : "or",
+        list: selectedTechnologies,
+      },
     });
   };
 
   return (
-    <Card className={classes.filter} variant="outlined"> 
+    <Card className={classes.filter} variant="outlined">
       {/* TODO create a way to close and expand filter */}
-      {/* TODO create a way to control if will filter && or || */}
       <CardContent>
         <Typography variant="h6" className={classes.title}>
           Localize um candidato:
         </Typography>
         <AutoCompleteDefault
-          placeholder="Cidade"
+          type="city"
           options={citiesOption}
           setSelectedOptions={setSelectedCities}
         />
         <AutoCompleteDefault
-          placeholder="Experiência"
+          type="experience"
           options={experiencesOption}
           setSelectedOptions={setSelectedExperiences}
         />
         <AutoCompleteDefault
-          placeholder="Tecnologias"
+          type="technology"
           options={technologiesOption}
           setSelectedOptions={setSelectedTechnologies}
+          setWayToFilter={setWayToFilterTechnologies}
         />
         <Button
           variant="contained"
