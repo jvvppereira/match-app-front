@@ -47,7 +47,6 @@ export default function Filter({ setFilters }) {
   };
 
   return (
-    //TODO pin filter and header on top
     <Card className={classes.filter} variant="outlined">
       <ExpandedFilter
         expanded={expanded}
