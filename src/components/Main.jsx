@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import service from "../services/Service";
 import Candidate from "./Candidate";
-import Filter from "./Filter/Filter";
 import ListLoader from "./ListLoader";
 import NoDataFound from "./NoDataFound";
 
@@ -17,12 +16,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Main() {
+export default function Main({ filters }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPageAvailable, setLastPageAvailable] = useState();
   const [candidates, setCandidates] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [filters, setFilters] = useState({});
 
   const classes = useStyles();
 
@@ -78,14 +76,13 @@ export default function Main() {
 
   return (
     <div className={classes.main}>
-      <Filter setFilters={setFilters} />
       <div className={classes.list}>
         {candidates.map((candidate) => (
           <Candidate key={candidate.id} candidate={candidate} /> //TODO create a button to back to the top
         ))}
         {isLoading && <ListLoader />}
-        {!isLoading && candidates.length === 0 && <NoDataFound />} 
-      </div> 
+        {!isLoading && candidates.length === 0 && <NoDataFound />}
+      </div>
     </div>
   );
 }
