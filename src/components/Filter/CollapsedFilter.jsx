@@ -2,17 +2,26 @@ import {
   CardContent,
   Collapse,
   IconButton,
+  makeStyles,
   Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import React from "react";
 import ChipDefault from "./ChipDefault";
 
+const useStyles = makeStyles({
+  title: {
+    marginBottom: "10px",
+  },
+  button: {
+    float: "right",
+    marginBottom: "16px",
+  },
+});
 export default function CollapsedFilter({
   expanded,
   selectedValues,
   handleExpandClick,
-  style,
 }) {
   const [
     selectedCities,
@@ -21,10 +30,12 @@ export default function CollapsedFilter({
     wayToFilterTechnologies,
   ] = selectedValues;
 
+  const classes = useStyles();
+
   return (
     <Collapse in={!expanded} timeout="auto" unmountOnExit>
       <CardContent>
-        <Typography variant="h6" className={style.title}>
+        <Typography variant="h6" className={classes.title}>
           Filtros selecionados
         </Typography>
         <ChipDefault type="city" values={selectedCities} />
@@ -38,7 +49,7 @@ export default function CollapsedFilter({
         <IconButton
           color="primary"
           size="small"
-          className={style.button}
+          className={classes.button}
           onClick={handleExpandClick}
         >
           <ExpandMoreIcon />

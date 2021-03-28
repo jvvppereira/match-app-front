@@ -1,14 +1,29 @@
-import { Button, CardContent, Collapse, Typography } from "@material-ui/core";
+import {
+  Button,
+  CardContent,
+  Collapse,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import service from "../../services/Service";
 import AutoCompleteDefault from "./AutoCompleteDefault";
 import SearchIcon from "@material-ui/icons/Search";
 
+const useStyles = makeStyles({
+  title: {
+    marginBottom: "10px",
+  },
+  button: {
+    float: "right",
+    marginBottom: "16px",
+  },
+});
+
 export default function ExpandedFilter({
   expanded,
   selectedValues,
   filterClick,
-  style,
 }) {
   const [citiesOption, setCitiesOption] = useState([]);
   const [experiencesOption, setExperiencesOption] = useState([]);
@@ -24,6 +39,8 @@ export default function ExpandedFilter({
     setSelectedTechnologies,
     setWayToFilterTechnologies,
   ] = selectedValues;
+
+  const classes = useStyles();
 
   useEffect(() => {
     const loadFilterOptions = async () => {
@@ -43,7 +60,7 @@ export default function ExpandedFilter({
   return (
     <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent>
-        <Typography variant="h6" className={style.title}>
+        <Typography variant="h6" className={classes.title}>
           Localize um candidato
         </Typography>
         <AutoCompleteDefault
@@ -69,7 +86,7 @@ export default function ExpandedFilter({
         <Button
           variant="contained"
           color="primary"
-          className={style.button}
+          className={classes.button}
           endIcon={<SearchIcon></SearchIcon>}
           onClick={filterClick}
         >

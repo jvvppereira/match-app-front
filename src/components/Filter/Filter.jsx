@@ -8,18 +8,7 @@ const useStyles = makeStyles({
     maxWidth: "760px",
     margin: "20px auto 0",
   },
-  autocomplete: {
-    marginBottom: "20px",
-  },
-  title: {
-    marginBottom: "10px",
-  },
-
-  button: {
-    float: "right",
-    marginBottom: "16px",
-  },
-});//TODO remove bind css
+});
 
 export default function Filter({ setFilters }) {
   const [selectedCities, setSelectedCities] = useState([]);
@@ -64,13 +53,11 @@ export default function Filter({ setFilters }) {
         expanded={expanded}
         selectedValues={selectedValues}
         filterClick={filterClick}
-        style={classes}
       />
       <CollapsedFilter
         expanded={expanded}
         selectedValues={selectedValues}
         handleExpandClick={handleExpandClick}
-        style={classes}
       />
     </Card>
   );
