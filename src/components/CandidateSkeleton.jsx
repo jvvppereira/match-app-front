@@ -48,7 +48,13 @@ export default function CandidateSkeleton({
 
   return (
     <div>
-      {candidate.isEmpty ? <Skeleton className={classes.skeleton} /> : text}
+      {candidate.isEmpty ? (
+        <Skeleton className={classes.skeleton} />
+      ) : infoType === "technologies" ? (
+        <div dangerouslySetInnerHTML={{ __html: text }} />
+      ) : (
+        text
+      )}
     </div>
   );
 }

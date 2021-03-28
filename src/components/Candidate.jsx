@@ -28,17 +28,18 @@ export default function Candidate({ candidate }) {
   const classes = useStyles();
 
   const technologiesList = candidate.technologies
-    .sort(
-      (technologyLeft, technologyRight) =>
-        technologyLeft.name < technologyRight.name ? -1 : 1
+    .sort((technologyLeft, technologyRight) =>
+      technologyLeft.name < technologyRight.name ? -1 : 1
     )
-    .reduce(
-      (acumulator, currentTechnology) =>
-        `${acumulator}, ${currentTechnology.name}${
-          currentTechnology.is_main_tech ? "*" : ""
-        }`,
-      ""
-    ) //TODO a way to empashis on main tech
+    .reduce((acumulator, currentTechnology) => {
+      let currentTechnologyName = currentTechnology.name;
+
+      if (currentTechnology.is_main_tech) {
+        currentTechnologyName = `<u>${currentTechnologyName}</u>`;
+      }
+
+      return `${acumulator}, ${currentTechnologyName}`;
+    }, "")
     .slice(1);
 
   candidate.idText = `Candidato #${candidate.id}`;
