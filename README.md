@@ -14,7 +14,7 @@ The methods to run this app are:
 
 ## How to see it?
 
-This project is being hosted at Heroku environment at this link: [click here!](https://match-app-front.herokuapp.com)
+This project is being hosted at Heroku environment at this link: [click here!](https://match-app-front.vercel.app/)
 
 ## Code climate evalute
 

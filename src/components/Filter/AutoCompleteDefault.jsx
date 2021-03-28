@@ -18,11 +18,11 @@ export default function AutoCompleteDefault({
   options,
   setSelectedOptions,
   setWayToFilter,
+  value,
 }) {
   const classes = useStyles();
 
   let label;
-
   switch (type) {
     case "city":
       label = "Cidade";
@@ -42,6 +42,7 @@ export default function AutoCompleteDefault({
         size="small"
         multiple
         options={options}
+        value={value}
         filterSelectedOptions
         onChange={(event, value) => setSelectedOptions(value)}
         noOptionsText="Nenhum valor encontrado"

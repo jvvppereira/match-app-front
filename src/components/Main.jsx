@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import service from "../services/Service";
 import Candidate from "./Candidate";
-import Filter from "./Filter";
+import Filter from "./Filter/Filter";
 import ListLoader from "./ListLoader";
 import NoDataFound from "./NoDataFound";
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Main() {
+export default function Main() { //TODO add a new favicon
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPageAvailable, setLastPageAvailable] = useState();
   const [candidates, setCandidates] = useState([]);
