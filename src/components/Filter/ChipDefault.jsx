@@ -26,22 +26,24 @@ export default function ChipDefault({ type, values }) {
       break;
   }
 
+  const replaceYearsText = (text) => {
+    return type === "experience" ? text.replace("years", "anos") : text;
+  };
+  
+  const getListSplittedByComma = (list) => {
+    return list.reduce(
+      (acumulator, currentValue) =>
+        `${acumulator}, ${replaceYearsText(currentValue)}`,
+      ""
+    );
+  };
+
   const formatSelectedValues = (selectedValues) => {
     if (Array.isArray(selectedValues)) {
       if (selectedValues.length === 0) {
         return "Todas";
       }
-      return selectedValues
-        .reduce(
-          (acumulator, currentValue) =>
-            `${acumulator}, ${
-              type === "experience"
-                ? currentValue.replace("years", "anos")
-                : currentValue
-            }`,
-          ""
-        )
-        .slice(1);
+      return getListSplittedByComma(selectedValues).slice(1);
     } else {
       return selectedValues ? "Sim" : "Não";
     }
