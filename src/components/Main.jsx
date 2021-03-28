@@ -81,11 +81,11 @@ export default function Main() { //TODO add a new favicon
       <Filter setFilters={setFilters} />
       <div className={classes.list}>
         {candidates.map((candidate) => (
-          <Candidate key={candidate.id} candidate={candidate} />
+          <Candidate key={candidate.id} candidate={candidate} /> //TODO create a button to back to the top
         ))}
         {isLoading && <ListLoader />}
-        {!isLoading && candidates.length === 0 && <NoDataFound />}
-      </div>
+        {!isLoading && candidates.length === 0 && <NoDataFound />} 
+      </div> 
     </div>
   );
 }

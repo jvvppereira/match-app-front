@@ -66,7 +66,7 @@ export default function AutoCompleteDefault({
             />
           }
           label="Atender a todas as tecnologias"
-        /> //TODO filter by main tech
+        />
       )}
     </div>
   );
