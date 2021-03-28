@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Main() { //TODO add a new favicon
+export default function Main() {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPageAvailable, setLastPageAvailable] = useState();
   const [candidates, setCandidates] = useState([]);

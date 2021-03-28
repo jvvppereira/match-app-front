@@ -11,6 +11,8 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    position: "sticky",
+    top: "0",
   },
 });
 

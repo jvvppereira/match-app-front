@@ -7,6 +7,8 @@ const useStyles = makeStyles({
   filter: {
     maxWidth: "760px",
     margin: "20px auto 0",
+    position: "sticky",
+    top: "80px",
   },
 });
 
