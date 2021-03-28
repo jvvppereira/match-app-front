@@ -19,6 +19,7 @@ export default function AutoCompleteDefault({
   setSelectedOptions,
   setWayToFilter,
   value,
+  wayToFilterValue,
 }) {
   const classes = useStyles();
 
@@ -61,6 +62,7 @@ export default function AutoCompleteDefault({
         <FormControlLabel
           control={
             <Checkbox
+              checked={wayToFilterValue}
               onChange={(event) => setWayToFilter(event.target.checked)}
               color="primary"
             />

@@ -64,6 +64,7 @@ export default function ExpandedFilter({
           value={selectedTechnologies}
           setSelectedOptions={setSelectedTechnologies}
           setWayToFilter={setWayToFilterTechnologies}
+          wayToFilterValue={wayToFilterTechnologies}
         />
         <Button
           variant="contained"
