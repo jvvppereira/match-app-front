@@ -1,0 +1,997 @@
+{
+  "data": [
+    {
+      "id": 31562,
+      "city": "Rio de Janeiro - RJ",
+      "experience": "12+ years",
+      "technologies": [
+        {
+          "name": "Java",
+          "is_main_tech": true
+        },
+        {
+          "name": "Python",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java (Android)",
+          "is_main_tech": false
+        },
+        {
+          "name": "Ruby",
+          "is_main_tech": false
+        },
+        {
+          "name": "Objective-C (iOS)",
+          "is_main_tech": false
+        },
+        {
+          "name": "Ruby on Rails",
+          "is_main_tech": false
+        },
+        {
+          "name": "Hibernate",
+          "is_main_tech": false
+        },
+        {
+          "name": "Linux",
+          "is_main_tech": false
+        },
+        {
+          "name": "Web Services",
+          "is_main_tech": false
+        },
+        {
+          "name": "RESTful",
+          "is_main_tech": false
+        },
+        {
+          "name": "Docker",
+          "is_main_tech": false
+        },
+        {
+          "name": "Elasticsearch",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": true
+        },
+        {
+          "name": "Spring",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 111734,
+      "city": "Recife - PE",
+      "experience": "4-5 years",
+      "technologies": [
+        {
+          "name": "React",
+          "is_main_tech": true
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": true
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "ASP.NET Core",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 7",
+          "is_main_tech": false
+        },
+        {
+          "name": "AngularJS",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 104458,
+      "city": "Curitiba - PR",
+      "experience": "5-6 years",
+      "technologies": [
+        {
+          "name": "C#",
+          "is_main_tech": true
+        },
+        {
+          "name": "Unity",
+          "is_main_tech": false
+        },
+        {
+          "name": "Blender",
+          "is_main_tech": false
+        },
+        {
+          "name": "PHP",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Actionscript",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 119478,
+      "city": "Osasco - SP",
+      "experience": "3-4 years",
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "is_main_tech": true
+        },
+        {
+          "name": "React",
+          "is_main_tech": false
+        },
+        {
+          "name": "TypeScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": true
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 8",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 53382,
+      "city": "Guarulhos - SP",
+      "experience": "2-3 years",
+      "technologies": [
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "Power BI",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "SQL Server",
+          "is_main_tech": false
+        },
+        {
+          "name": "Nosql",
+          "is_main_tech": false
+        },
+        {
+          "name": "VBA",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": true
+        },
+        {
+          "name": "C",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "NPM",
+          "is_main_tech": false
+        },
+        {
+          "name": "Sass",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": true
+        },
+        {
+          "name": "MongoDB",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 89560,
+      "city": "São José - SC",
+      "experience": "0-1 years",
+      "technologies": [
+        {
+          "name": "Angular 2",
+          "is_main_tech": false
+        },
+        {
+          "name": "MongoDB",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Gulp",
+          "is_main_tech": false
+        },
+        {
+          "name": "Sass",
+          "is_main_tech": true
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "WordPress",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "Elixir",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": true
+        }
+      ]
+    },
+    {
+      "id": 104365,
+      "city": "Marília - SP",
+      "experience": "1-2 years",
+      "technologies": [
+        {
+          "name": "Delphi",
+          "is_main_tech": false
+        },
+        {
+          "name": "ExpressJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": true
+        },
+        {
+          "name": "AngularJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "TDD",
+          "is_main_tech": false
+        },
+        {
+          "name": "SCRUM",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 2",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": true
+        },
+        {
+          "name": "React Native",
+          "is_main_tech": false
+        },
+        {
+          "name": "AdonisJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "MongoDB",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 105599,
+      "city": "Fortaleza - CE",
+      "experience": "0-1 years",
+      "technologies": [
+        {
+          "name": "Kotlin",
+          "is_main_tech": true
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java (Android)",
+          "is_main_tech": false
+        },
+        {
+          "name": "Python",
+          "is_main_tech": false
+        },
+        {
+          "name": "Flask",
+          "is_main_tech": false
+        },
+        {
+          "name": "Django",
+          "is_main_tech": false
+        },
+        {
+          "name": "Flutter",
+          "is_main_tech": true
+        }
+      ]
+    },
+    {
+      "id": 22499,
+      "city": "Criciúma - SC",
+      "experience": "12+ years",
+      "technologies": [
+        {
+          "name": "Java",
+          "is_main_tech": true
+        },
+        {
+          "name": "Swift (iOS)",
+          "is_main_tech": false
+        },
+        {
+          "name": "AngularJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "Python",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": false
+        },
+        {
+          "name": "Ionic",
+          "is_main_tech": false
+        },
+        {
+          "name": "Django",
+          "is_main_tech": false
+        },
+        {
+          "name": "Hibernate",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Web Services",
+          "is_main_tech": false
+        },
+        {
+          "name": "SCRUM",
+          "is_main_tech": false
+        },
+        {
+          "name": "Linux",
+          "is_main_tech": true
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "AWS",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 119469,
+      "city": "Salvador - BA",
+      "experience": "10-11 years",
+      "technologies": [
+        {
+          "name": "PHP",
+          "is_main_tech": true
+        },
+        {
+          "name": "Laravel 5",
+          "is_main_tech": false
+        },
+        {
+          "name": "CakePHP",
+          "is_main_tech": false
+        },
+        {
+          "name": "Spring Boot",
+          "is_main_tech": true
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "ORACLE",
+          "is_main_tech": false
+        },
+        {
+          "name": "RESTful",
+          "is_main_tech": false
+        },
+        {
+          "name": "Git",
+          "is_main_tech": false
+        },
+        {
+          "name": "Docker",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "Continuous Integration/Deployment(CI/CD)",
+          "is_main_tech": false
+        },
+        {
+          "name": "Arquitetura SOA",
+          "is_main_tech": false
+        },
+        {
+          "name": "SCRUM",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 118027,
+      "city": "Santa Cruz do Sul - RS",
+      "experience": "3-4 years",
+      "technologies": [
+        {
+          "name": "Angular 8",
+          "is_main_tech": true
+        },
+        {
+          "name": "Angular 9",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 10",
+          "is_main_tech": false
+        },
+        {
+          "name": "AngularJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 7",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "TypeScript",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 100103,
+      "city": "Campina Grande - PB",
+      "experience": "3-4 years",
+      "technologies": [
+        {
+          "name": "Java",
+          "is_main_tech": true
+        },
+        {
+          "name": "Python",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 115384,
+      "city": "Belo Horizonte - MG",
+      "experience": "2-3 years",
+      "technologies": [
+        {
+          "name": "PHP",
+          "is_main_tech": true
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 108191,
+      "city": "Rio de Janeiro - RJ",
+      "experience": "6-7 years",
+      "technologies": [
+        {
+          "name": "PHP",
+          "is_main_tech": true
+        },
+        {
+          "name": "Laravel 5",
+          "is_main_tech": true
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "ExpressJS",
+          "is_main_tech": false
+        },
+        {
+          "name": "Bootstrap",
+          "is_main_tech": false
+        },
+        {
+          "name": "jQuery",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": false
+        },
+        {
+          "name": "React Native",
+          "is_main_tech": false
+        },
+        {
+          "name": "Nginx",
+          "is_main_tech": false
+        },
+        {
+          "name": "Docker",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 111691,
+      "city": "São Paulo - SP",
+      "experience": "2-3 years",
+      "technologies": [
+        {
+          "name": "React",
+          "is_main_tech": true
+        },
+        {
+          "name": "React Native",
+          "is_main_tech": false
+        },
+        {
+          "name": "AngularJS",
+          "is_main_tech": true
+        },
+        {
+          "name": "Ionic",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "PHP",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Git",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "C#",
+          "is_main_tech": false
+        },
+        {
+          "name": "RESTful",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 38121,
+      "city": "Joinville - SC",
+      "experience": "4-5 years",
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "PHP",
+          "is_main_tech": true
+        },
+        {
+          "name": "React Native",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML",
+          "is_main_tech": false
+        },
+        {
+          "name": "React",
+          "is_main_tech": true
+        },
+        {
+          "name": "SQL Server",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 101359,
+      "city": "Maringá - PR",
+      "experience": "2-3 years",
+      "technologies": [
+        {
+          "name": "JSF",
+          "is_main_tech": false
+        },
+        {
+          "name": "Web Services",
+          "is_main_tech": false
+        },
+        {
+          "name": "Cultura Ágil",
+          "is_main_tech": true
+        },
+        {
+          "name": "SCRUM",
+          "is_main_tech": false
+        },
+        {
+          "name": "Kanban",
+          "is_main_tech": false
+        },
+        {
+          "name": "Shell Script",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "HTML5",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Maven",
+          "is_main_tech": false
+        },
+        {
+          "name": "Hibernate",
+          "is_main_tech": false
+        },
+        {
+          "name": "JPA",
+          "is_main_tech": false
+        },
+        {
+          "name": "Primefaces",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java",
+          "is_main_tech": true
+        },
+        {
+          "name": "liquibase",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 80561,
+      "city": "São Paulo - SP",
+      "experience": "4-5 years",
+      "technologies": [
+        {
+          "name": "Swift (iOS)",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "Kotlin",
+          "is_main_tech": true
+        },
+        {
+          "name": "Spring Boot",
+          "is_main_tech": false
+        },
+        {
+          "name": "JUnit",
+          "is_main_tech": false
+        },
+        {
+          "name": "Java (Android)",
+          "is_main_tech": true
+        },
+        {
+          "name": "Git",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 88242,
+      "city": "São Paulo - SP",
+      "experience": "2-3 years",
+      "technologies": [
+        {
+          "name": "Delphi",
+          "is_main_tech": true
+        },
+        {
+          "name": ".NET",
+          "is_main_tech": false
+        },
+        {
+          "name": ".NET Core",
+          "is_main_tech": true
+        },
+        {
+          "name": "SQL Server",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 2",
+          "is_main_tech": false
+        },
+        {
+          "name": "Vue.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "Node.js",
+          "is_main_tech": false
+        },
+        {
+          "name": "MySQL",
+          "is_main_tech": false
+        }
+      ]
+    },
+    {
+      "id": 63520,
+      "city": "Niterói - RJ",
+      "experience": "1-2 years",
+      "technologies": [
+        {
+          "name": "C#",
+          "is_main_tech": true
+        },
+        {
+          "name": "Java",
+          "is_main_tech": false
+        },
+        {
+          "name": "C",
+          "is_main_tech": false
+        },
+        {
+          "name": "SQL Server",
+          "is_main_tech": false
+        },
+        {
+          "name": "Unreal Engine",
+          "is_main_tech": false
+        },
+        {
+          "name": "JavaScript",
+          "is_main_tech": false
+        },
+        {
+          "name": "PHP",
+          "is_main_tech": false
+        },
+        {
+          "name": "CSS3",
+          "is_main_tech": false
+        },
+        {
+          "name": "PostgreSQL",
+          "is_main_tech": false
+        },
+        {
+          "name": "Python",
+          "is_main_tech": false
+        },
+        {
+          "name": "Unity3D",
+          "is_main_tech": false
+        },
+        {
+          "name": ".NET Core",
+          "is_main_tech": false
+        },
+        {
+          "name": "ASP.NET Core",
+          "is_main_tech": false
+        },
+        {
+          "name": "Angular 8",
+          "is_main_tech": true
+        }
+      ]
+    }
+  ],
+  "total": 100,
+  "offset": 0,
+  "limit": 20,
+  "page": 1,
+  "pages": 5
+}
