@@ -55,8 +55,7 @@ export default function Filter({ setFilters }) {
 
     if (selectedTechnologies.length > 0) {
       filters["candidate_technology.technology.name"] = {
-        // type: wayToFilterTechnologies ? "AND" : "IN", //TODO FIX ME AT BACKEND
-        type: "AND",
+        type: wayToFilterTechnologies ? "AND" : "IN",
         values: selectedTechnologies,
       };
     }
