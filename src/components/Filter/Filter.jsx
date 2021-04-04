@@ -36,13 +36,33 @@ export default function Filter({ setFilters }) {
 
   const filterClick = () => {
     handleExpandClick();
+
+    const filters = {};
+
+    if (selectedCities.length > 0) {
+      filters["cityName"] = {
+        type: "IN",
+        values: selectedCities,
+      };
+    }
+
+    if (selectedExperiences.length > 0) {
+      filters["experience.name"] = {
+        type: "IN",
+        values: selectedExperiences,
+      };
+    }
+
+    if (selectedTechnologies.length > 0) {
+      filters["candidate_technology.technology.name"] = {
+        // type: wayToFilterTechnologies ? "AND" : "IN", //TODO FIX ME AT BACKEND
+        type: "AND",
+        values: selectedTechnologies,
+      };
+    }
+
     setFilters({
-      cities: selectedCities,
-      experiences: selectedExperiences,
-      technologies: {
-        wayToFilter: wayToFilterTechnologies ? "and" : "or",
-        list: selectedTechnologies,
-      },
+      filters,
     });
   };
 

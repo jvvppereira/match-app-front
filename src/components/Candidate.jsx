@@ -27,14 +27,18 @@ const useStyles = makeStyles({
 export default function Candidate({ candidate }) {
   const classes = useStyles();
 
-  const technologiesList = candidate.technologies
+  const technologiesList = candidate.candidate_technology
+    ?.map((item) => {
+      item.technology.mainTechnology = item.mainTechnology;
+      return item.technology;
+    })
     .sort((technologyLeft, technologyRight) =>
       technologyLeft.name < technologyRight.name ? -1 : 1
     )
     .reduce((acumulator, currentTechnology) => {
       let currentTechnologyName = currentTechnology.name;
 
-      if (currentTechnology.is_main_tech) {
+      if (currentTechnology.mainTechnology) {
         currentTechnologyName = `<u>${currentTechnologyName}</u>`;
       }
 
@@ -42,12 +46,9 @@ export default function Candidate({ candidate }) {
     }, "")
     .slice(1);
 
-  candidate.idText = `Candidato #${candidate.id}`;
-  candidate.experienceText = `Experiência: ${candidate.experience.replace(
-    "years",
-    "anos"
-  )}`;
-  candidate.cityText = `Cidade: ${candidate.city}`;
+  candidate.idText = `Candidato #${candidate.visualId}`;
+  candidate.experienceText = `Experiência: ${candidate.experience.name}`;
+  candidate.cityText = `Cidade: ${candidate.cityName}`;
   candidate.technologiesText = `Tecnologias: ${technologiesList}`;
 
   return (

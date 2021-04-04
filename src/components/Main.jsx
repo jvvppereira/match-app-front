@@ -60,7 +60,7 @@ export default function Main({ filters }) {
     loadCandidates();
   }, [filters]);
 
-  useEffect(() => {
+  useEffect(() => { //TODO verify why stopped to works
     const handleScroll = () => {
       const LISTLOADER_HEIGTH = 600; //TODO verify how to show loader better
       if (
