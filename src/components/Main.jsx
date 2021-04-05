@@ -38,7 +38,7 @@ export default function Main({ filters }) {
     setCurrentPage(page);
 
     const response = await service.patch(
-      `/candidate?rowsPerPage=20&page=${page}`,
+      `/candidate?rowsPerPage=10&page=${page}`,
       filters
     );
     const { data: candidatesFromApi, pages } = response.data;
